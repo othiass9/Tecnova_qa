@@ -1,0 +1,14 @@
+{
+  "name": "desafio-pokeapi",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Proyecto Cypress para pruebas de API contra PokeAPI.",
+  "scripts": {
+    "test": "set ELECTRON_RUN_AS_NODE=&& set CYPRESS_CACHE_FOLDER=.cypress-cache&& cypress run",
+    "test:api": "set ELECTRON_RUN_AS_NODE=&& set CYPRESS_CACHE_FOLDER=.cypress-cache&& cypress run --spec \"cypress/e2e/api/**/*.cy.js\"",
+    "test:open": "set ELECTRON_RUN_AS_NODE=&& set CYPRESS_CACHE_FOLDER=.cypress-cache&& cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^13.17.0"
+  }
+}
