@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { mkdirSync } from 'node:fs';
 
 test.describe('IMDb - Celebridades nacidas hoy hace 40 anios', () => {
 
@@ -74,8 +75,12 @@ test.describe('IMDb - Celebridades nacidas hoy hace 40 anios', () => {
     await primerEnlaceDescripcion.click();
 
     // 11. Tomar captura de pantalla
+    mkdirSync('screenshots', { recursive: true });
+
+    const navegador = testInfo.project.name.toLowerCase();
+
     await page.screenshot({
-      path: testInfo.outputPath('primer-enlace-descripcion.png'),
+      path: `screenshots/imdb-celebridades-nacidas-hoy-40-anios-atras-${navegador}.png`,
       fullPage: true,
     });
 

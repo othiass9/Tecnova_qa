@@ -53,6 +53,23 @@ Despues de ejecutar las pruebas:
 npm run report
 ```
 
+## Captura de pantalla solicitada
+
+El spec `imdb-celebridades-nacidas-hoy-40-anios-atras.spec.ts` genera las capturas dentro de la carpeta:
+
+```text
+screenshots/
+```
+
+Como las pruebas corren en Chromium y Firefox, los archivos quedan con estos nombres:
+
+```text
+screenshots/imdb-celebridades-nacidas-hoy-40-anios-atras-chromium.png
+screenshots/imdb-celebridades-nacidas-hoy-40-anios-atras-firefox.png
+```
+
+Estos nombres permiten ubicar rapidamente la captura solicitada y saber con que navegador fue generada.
+
 ## Specs incluidos
 
 - `imdb-nicolas-cage.spec.ts`
